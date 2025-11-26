@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Apresentação sobre a Tag NAV</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
+
+    nav.menu-topo {
+        background: #222;
+        color: white;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    nav.menu-topo a {
+        color: white;
+        text-decoration: underline;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+
+    .btn-menu {
+        font-size: 26px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    nav.menu-lateral {
+        width: 180px;
+        background: #333;
+        position: absolute;
+        top: 60px; 
+        right: 20px;
+        border-radius: 6px;
+        padding: 10px 0;
+        display: none; 
+    }
+
+    nav.menu-lateral a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav.menu-lateral a:hover {
+        background: #444;
+    }
+
+
+    .conteudo {
+        padding: 20px;
+    }
+
+</style>
+</head>
+<body>
+
+<nav class="menu-topo">
+    <div>
+        <a href="#sobre">Sobre o &lt;nav&gt;</a>
+        <a href="#função">Função</a>
+    </div>
+
+    <span class="btn-menu" onclick="toggleMenu()">☰</span>
+</nav>
+
+<nav class="menu-lateral" id="menuLateral">
+    <a href="#exemplo">Exemplo</a>
+    <a href="#uso">Como usar</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="conteudo">
+    <h1 id="sobre">Apresentação sobre a Tag &lt;nav&gt;</h1>
+    <p>A tag <strong>&lt;nav&gt;</strong> define áreas de navegação contendo links importantes do site.</p>
+    <p>&lt;nav&gt;<br>
+  &lt;a href="/html/"&gt;HTML&lt;/a&gt; |<br>
+  &lt;a href="/css/">CSS&lt;/a&gt; |<br>
+  &lt;a href="/js/">JavaScript&lt;/a&gt; |<br>
+  &lt;a href="/python/"&gt;Python&lt;/a&gt;<br>
+&lt;/nav&gt;</p>
+
+    <h2 id="função">Como utilizar</h2>
+    <p>01- O &lt;nav&gt;elemento destina-se apenas a blocos principais de links de navegação.<br>
+    02- Leitores de tela e outras tecnologias assistivas usam a tag &lt;nav&gt; como um ponto de referência para ajudar usuários com deficiência visual.<br>
+    03- A &lt;nav&gt;tag também suporta os atributos globais.<br>
+    04- A &lt;nav&gt;tag também suporta os atributos de evento.<br>
+</p>
+</div>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("menuLateral");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
